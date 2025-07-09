@@ -1,7 +1,11 @@
-import { IsString, IsNotEmpty } from 'class-validator';
+import { IsString, IsNotEmpty, IsArray, IsOptional } from 'class-validator';
 
 export class BasicPromptDto {
   @IsString()
   @IsNotEmpty()
-  prompt: string
+  prompt: string;
+
+  @IsArray()
+  @IsOptional()
+  files: Express.Multer.File[];
 }
