@@ -15,4 +15,8 @@ export class GeminiService {
   async basicPromptStream(basicPromptDto: BasicPromptDto) {
     return await basicPromptStreamUseCase(this.ai, basicPromptDto);
   }
+
+  // async advancedPromptStream(basicPromptDro: BasicPromptDto) {
+  //   return await basicPromptStreamUseCase(this.ai, basicPromptDro);
+  // }
 }
