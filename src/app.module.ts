@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { GeminiModule } from './gemini/gemini.module';
 import { ConfigModule } from '@nestjs/config';
+import { GeminiModule } from './gemini/gemini.module';
 
 @Module({
   imports: [
