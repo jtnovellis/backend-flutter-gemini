@@ -9,7 +9,7 @@ export async function basicPromptStreamUseCase(
   ai: GoogleGenAI,
   basicPromptDto: BasicPromptDto,
 ) {
-  const files = basicPromptDto.files;
+  const files = basicPromptDto.files ?? [];
 
   const images = await Promise.all(
     files.map((file) => {
