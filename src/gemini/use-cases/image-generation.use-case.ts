@@ -35,7 +35,7 @@ export async function imageGenerationUseCase(
 ): Promise<ImageGenerationResponse> {
   const files = imageGenerationDto.files ?? [];
 
-  const images = await geminiUploadFile(ai, files);
+  const images = await geminiUploadFile(ai, files, { transformToPng: true });
 
   const contents: ContentListUnion = [{ text: imageGenerationDto.prompt }];
 
